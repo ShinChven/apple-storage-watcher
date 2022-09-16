@@ -29,5 +29,5 @@ const models = {
 
 ## Interval 时钟频率
 
-[Request Interval / 配置时钟频率](src/index.js#L67)
+[Request Interval / 配置时钟频率](src/index.js#L65)
 

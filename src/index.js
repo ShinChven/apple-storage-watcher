@@ -1,6 +1,5 @@
 const http = require('superagent');
 const consoleColors = require('./console-colors');
-const CronJob = require('cron').CronJob;
 const sound = require('sound-play');
 
 /**
@@ -17,7 +16,6 @@ const monitorIphoneStorage = async (productName, locationName) => {
 		const url = encodeURI(`https://www.apple.com.cn/shop/fulfillment-messages?pl=true&mts.0=regular&parts.0=${productName}&location=${locationName}`);
 		console.log(consoleColors.BgBlack, url);
 		const res = await http.get(url);
-
 
 		const {
 				stores
@@ -52,18 +50,9 @@ const monitorIphoneStorage = async (productName, locationName) => {
 
 }
 
-// // https://crontab.guru/every-1-minute 定时模版
-// new CronJob('* * * * *', async () => {
-//   for (const [productName, locationName] of Object.entries(models)) {
-//     try {
-//       await monitorIphoneStorage(productName, locationName);
-//     } catch (e) {
-//       console.error(e);
-//     }
-//     console.log(consoleColors.BgBlack, '----------------------------------------');
-//   }
-// }).start();
-
+/**
+ * Run program in loop
+ */
 setInterval(async () => {
 		for (const [productName, locationName] of Object.entries(models)) {
 				try {
@@ -73,4 +62,4 @@ setInterval(async () => {
 				}
 				console.log(consoleColors.BgBlack, '----------------------------------------');
 		}
-}, 1000 * 5);
+}, 1000 * 5); // Fetch interval 刷新周期，别太快。

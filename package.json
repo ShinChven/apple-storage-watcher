@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cron": "^2.1.0",
+    "sound-play": "^1.1.0",
     "superagent": "^8.0.0"
   }
 }
