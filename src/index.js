@@ -43,8 +43,19 @@ const monitorIphoneStorage = async (productName, locationName) => {
 
 }
 
-// https://crontab.guru/every-1-minute 定时模版
-new CronJob('* * * * *', async () => {
+// // https://crontab.guru/every-1-minute 定时模版
+// new CronJob('* * * * *', async () => {
+//   for (const [productName, locationName] of Object.entries(models)) {
+//     try {
+//       await monitorIphoneStorage(productName, locationName);
+//     } catch (e) {
+//       console.error(e);
+//     }
+//     console.log(consoleColors.BgBlack, '----------------------------------------');
+//   }
+// }).start();
+
+setInterval(async () => {
   for (const [productName, locationName] of Object.entries(models)) {
     try {
       await monitorIphoneStorage(productName, locationName);
@@ -53,5 +64,5 @@ new CronJob('* * * * *', async () => {
     }
     console.log(consoleColors.BgBlack, '----------------------------------------');
   }
-}).start();
+},1000 * 10);
 
