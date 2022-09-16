@@ -14,7 +14,7 @@ const models = {
 
 const monitorIphoneStorage = async (productName, locationName) => {
   const url = encodeURI(`https://www.apple.com.cn/shop/fulfillment-messages?pl=true&mts.0=regular&parts.0=${productName}&location=${locationName}`);
-  console.log(consoleColors.BgBlack, url);
+  console.log(consoleColors.Reset, url);
   const res = await http.get(url);
 
   const {
@@ -32,15 +32,15 @@ const monitorIphoneStorage = async (productName, locationName) => {
         const {
           pickupDisplay
         } = store.partsAvailability[productName];
-        const color = pickupDisplay === 'available' ? consoleColors.BgGreen : consoleColors.BgRed;
+        const color = pickupDisplay === 'available' ? consoleColors.FgGreen : consoleColors.FgRed;
         console.log(color, store.storeName, pickupDisplay);
         pickupDisplay === 'available' && sound.play('Hey.m4a');
       } catch (e) {
-        console.error(consoleColors.BgRed, '解析店铺信息出错');
+        console.error(consoleColors.FgRed, '解析店铺信息出错');
       }
     }
   } else {
-    console.log(consoleColors.BgRed, subHeader, {
+    console.log(consoleColors.FgRed, subHeader, {
       productName,
       locationName,
       storage: '无货可用商店',
@@ -59,6 +59,6 @@ setInterval(async () => {
     } catch (e) {
       console.error(e);
     }
-    console.log(consoleColors.BgBlack, '----------------------------------------');
+    console.log(consoleColors.Reset, `----------------${new Date().toLocaleString()}----------------`);
   }
 }, 1000 * 5); // Fetch interval 刷新周期，别太快。
