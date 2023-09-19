@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-schedule": "^2.1.1",
     "sound-play": "^1.1.0",
     "superagent": "^8.1.2"
   }
