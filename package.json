@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "sound-play": "^1.1.0",
-    "superagent": "^8.0.0"
+    "superagent": "^8.1.2"
   }
 }

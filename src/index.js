@@ -7,8 +7,8 @@ const sound = require('sound-play');
  * @type {{'MQ203CH/A': string, 'MPUJ3CH/A': string}}
  */
 const models = {
-  'MQ203CH/A': '河南 郑州 二七区',
-  'MPUJ3CH/A': '河南 郑州 二七区',
+  'MQ203CH/A': '上海 上海 浦东新区',
+  'MPUJ3CH/A': '上海 上海 浦东新区',
 }
 
 
@@ -20,9 +20,8 @@ const monitorIphoneStorage = async (productName, locationName) => {
   const {
     stores
   } = res.body.body.content.pickupMessage;
-  const {
-    subHeader
-  } = res.body.body.content.deliveryMessage[productName].regular;
+  const deliveryMessage = res.body.body.content.deliveryMessage[productName];
+  const subHeader = deliveryMessage && deliveryMessage.regular && deliveryMessage.regular.subHeader;
 
   console.log(subHeader, productName, locationName);
 
