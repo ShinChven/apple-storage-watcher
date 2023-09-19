@@ -7,8 +7,10 @@ const sound = require('sound-play');
  * @type {{'MQ203CH/A': string, 'MPUJ3CH/A': string}}
  */
 const models = {
-  'MQ203CH/A': '上海 上海 浦东新区',
-  'MPUJ3CH/A': '上海 上海 浦东新区',
+  'MU2W3CH/A': '上海 上海 浦东新区',
+  'MU2V3CH/A': '上海 上海 浦东新区',
+  'MU2U3CH/A': '上海 上海 浦东新区',
+  'MU2T3CH/A': '上海 上海 浦东新区',
 }
 
 
@@ -60,4 +62,4 @@ setInterval(async () => {
     }
     console.log(consoleColors.Reset, `----------------${new Date().toLocaleString()}----------------`);
   }
-}, 1000 * 5); // Fetch interval 刷新周期，别太快。
+}, 1000 * 30); // Fetch interval 刷新周期，别太快。
