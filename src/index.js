@@ -7,8 +7,8 @@ const sound = require('sound-play');
  * @type {{'MQ203CH/A': string, 'MPUJ3CH/A': string}}
  */
 const models = {
-  // 'MU2W3CH/A': '上海 上海 浦东新区',
-  'MU2V3CH/A': '上海 上海 浦东新区',
+  'MU2W3CH/A': '上海 上海 浦东新区',
+  // 'MU2V3CH/A': '上海 上海 浦东新区',
   // 'MU2U3CH/A': '上海 上海 浦东新区',
   // 'MU2T3CH/A': '上海 上海 浦东新区',
 }
