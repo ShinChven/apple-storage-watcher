@@ -27,11 +27,12 @@ const models = {
 }
 ```
 
-## Interval 时钟频率
+## 支持2种模式
+## 1.Interval 时钟频率
 
 [Request Interval / 配置时钟频率](src/index.js#L64)
 
-## ScheduleJob 周期性定时运行
+## 2.ScheduleJob 周期性定时运行
 [Request Schedule / 配置周期性定时运行](src/index.js#L150)
 
 ### 使用 cron 设定 周期性定时运行，设置及验证规则可参考[cron在线解析](https://cron.qqe2.com/)
