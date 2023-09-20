@@ -40,9 +40,9 @@ const models = {
   // -----iPhone 15 Pro Max-----
 
   // iPhone 15 Pro Max 256GB 
-  'MU2Q3CH/A': '原色钛金属',
-  'MU2R3CH/A': '蓝色钛金属',
-  'MU2P3CH/A': '白色钛金属',
+  // 'MU2Q3CH/A': '原色钛金属',
+  // 'MU2R3CH/A': '蓝色钛金属',
+  // 'MU2P3CH/A': '白色钛金属',
   // 'MU2N3CH/A': '黑色钛金属',
 
   // // iPhone 15 Pro Max 512GB
@@ -59,14 +59,15 @@ const models = {
 
 }
 
+const searchNearby = true;
+// 默认查询 浦东店
+const storeNum = 'R389';
+
 
 const monitorIphoneStorage = async (productName) => {
   // 获取单个门店库存数据
   // const url = encodeURI(`https://www.apple.com.cn/shop/fulfillment-messages?pl=true&mts.0=regular&parts.0=${productName}&location=${locationName}`);
   // 查询 附近门店，searchNearby=false 查询指定门店
-  const searchNearby = true;
-  // 默认查询 浦东店
-  const storeNum = 'R389';
   // 查询指定门店及附近门店数据
   const url = encodeURI(`https://www.apple.com.cn/shop/fulfillment-messages?pl=true&mts.0=regular&mts.1=compact&parts.0=${productName}&searchNearby=${searchNearby}&store=${storeNum}`);
   console.log(consoleColors.Reset, url);
@@ -156,3 +157,5 @@ schedule.scheduleJob({ start: startTime, end: endTime, rule: '0 0/3 15,16,17,18 
       await startTask();
     }, timeOut);
 });
+
+startTask().then();
