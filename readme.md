@@ -17,8 +17,8 @@ npm start
 
 ## Configuration 配置
 
-- [店铺编码](db/stores.md)
-- [产品编码](db/models.md)
+- [Store Codes / 店铺编码](db/stores.md)
+- [Products Code / 产品编码](db/models.md)
 
 ## 支持2种模式
 ## 1.Interval 时钟频率
