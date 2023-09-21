@@ -3,14 +3,7 @@ const consoleColors = require('./console-colors');
 const sound = require('sound-play');
 const schedule = require('node-schedule');
 
-/**
- * 型号 : 地址
- * @type {{'MQ203CH/A': string, 'MPUJ3CH/A': string}}
- */
 const models = {
-  // 'MQ203CH/A': '河南 郑州 二七区',
-  // 'MPUJ3CH/A': '河南 郑州 二七区',
-
   // -----iPhone 15 Pro -----
 
   // // iPhone 15 Pro 128GB
@@ -55,8 +48,6 @@ const models = {
   // 'MU613CH/A': '蓝色钛金属',
   // 'MU2Y3CH/A': '白色钛金属',
   // 'MU2X3CH/A': '黑色钛金属',
-
-
 }
 
 const searchNearby = true;
