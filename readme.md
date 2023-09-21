@@ -27,6 +27,10 @@ const models = {
 }
 ```
 
+## 店铺编码
+
+[Store / 配置店铺](db/stores.md)
+
 ## 支持2种模式
 ## 1.Interval 时钟频率
 
