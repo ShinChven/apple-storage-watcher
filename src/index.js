@@ -4,8 +4,7 @@ const sound = require('sound-play');
 const schedule = require('node-schedule');
 
 /**
- * 型号 : 地址
- * @type {{'MQ203CH/A': string, 'MPUJ3CH/A': string}}
+ * 要监听的型号
  */
 const models = {
   // 'MQ203CH/A': '河南 郑州 二七区',
