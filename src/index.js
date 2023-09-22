@@ -7,9 +7,6 @@ const schedule = require('node-schedule');
  * 要监听的型号
  */
 const models = {
-  // 'MQ203CH/A': '河南 郑州 二七区',
-  // 'MPUJ3CH/A': '河南 郑州 二七区',
-
   // -----iPhone 15 Pro -----
 
   // // iPhone 15 Pro 128GB
@@ -54,8 +51,6 @@ const models = {
   // 'MU613CH/A': '蓝色钛金属',
   // 'MU2Y3CH/A': '白色钛金属',
   // 'MU2X3CH/A': '黑色钛金属',
-
-
 }
 
 const searchNearby = true;

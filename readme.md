@@ -17,15 +17,8 @@ npm start
 
 ## Configuration 配置
 
-[Model and Color / 配置型号和颜色](src/index.js#L9)
-
-```javascript
-const models = {
-  'model': 'color',
-  '型号': '颜色',
-  'MTQ63CH/A': '原色钛金属',, // Exmaple 示例
-}
-```
+- [Store Codes / 店铺编码](db/stores.md)
+- [Products Code / 产品编码](db/models.md)
 
 ## 支持2种模式
 ## 1.Interval 时钟频率
